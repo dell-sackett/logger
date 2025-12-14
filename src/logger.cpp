@@ -70,6 +70,10 @@ void initLog(QueueHandle_t queue) {
     } else {
         logQueueHandle = queue;
     }
+#if DEBUG
+    Serial.print("logQueueHandle created at: ");
+    Serial.println((int)logQueueHandle);
+#endif
 }
 
 /** 
