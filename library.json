@@ -1,0 +1,23 @@
+{
+  "name": "Logger",
+  "version": "0.1.0",
+  "description": "This is the implimentaion of a logging task for FreeRTOS",
+  "keywords": "planet, happiness, people",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/username/hello-world.git"
+  },
+  "authors":
+  [
+    {
+      "name": "Dell Sackett",
+      "email": "dellray.sackett@gmail.com",
+      "url": "https://github.com/dell-sackett"
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/dell-sackett/logger",
+  "frameworks": ["arduino"],
+  "platforms": ["espressif32"]
+}
