@@ -3,7 +3,7 @@ Logger is a library I developed for personal use to log to the serial port of an
 
 
 ## Usage
-Using the logger in the most basic way is simple, you just start the task using xTaskCreate, or whichever version is appropriate for your situation. An example can be seen below.
+Using the logger in the most basic way is simple, you just start the task using xTaskCreate, or whichever version is appropriate for your situation. An example can be seen below. ***Note: The vTaskDelay() is NOT OPTIONAL. It needs to be at least 2 milliseconds long or you're going to have a bad time.***
 
 ```     
 xTaskCreate(tskLogger,
@@ -11,7 +11,8 @@ xTaskCreate(tskLogger,
     LOGGER_MEM,
     NULL,
     1,
-    NULL); 
+    NULL);
+vTaskDelay(2 / portTICK_PERIOD_MS); 
 ```
 
 Then you just call the function logWrite() to log your message. An example can be seen below.
